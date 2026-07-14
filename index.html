@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Коллекция концептов коммерческих сайтов и цифровых миров." />
+    <title>Selected Works - Digital Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="В начало страницы">SL / 26</a>
+      <p>Digital design portfolio</p>
+      <a class="header-link" href="#projects">Все проекты <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-meta">
+          <span>Selected works</span>
+          <span>2026</span>
+        </div>
+        <h1 id="intro-title">Коммерческие сайты<br />для <em>других миров</em></h1>
+        <div class="intro-footer">
+          <p>Коллекция самостоятельных цифровых концептов: от межзвёздной навигации до закрытых корпоративных архивов.</p>
+          <p class="project-count"><strong>09</strong><span>проектов<br />в коллекции</span></p>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">Проекты</h2>
+          <div class="filters" role="group" aria-label="Фильтр проектов">
+            <button class="filter is-active" type="button" data-filter="all">Все</button>
+            <button class="filter" type="button" data-filter="corporate">Корпорации</button>
+            <button class="filter" type="button" data-filter="research">Исследования</button>
+          </div>
+        </div>
+
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Independent portfolio / 2026</p>
+      <a href="#top">Наверх <span aria-hidden="true">↑</span></a>
+    </footer>
+
+    <template id="project-template">
+      <article class="project-card">
+        <a class="project-media" href="#" target="_blank" rel="noreferrer">
+          <img src="" alt="" loading="lazy" />
+          <span class="project-number"></span>
+          <span class="availability"><i></i><b>Проверяем</b></span>
+          <span class="open-icon" aria-hidden="true">↗</span>
+        </a>
+        <div class="project-info">
+          <div>
+            <p class="project-type"></p>
+            <h3></h3>
+          </div>
+          <p class="project-description"></p>
+          <a class="project-link" href="#" target="_blank" rel="noreferrer">Открыть проект <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
