@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.mjs 5191"
+    "dev": "node scripts/server.mjs 5191",
+    "start": "node scripts/server.mjs 5191",
+    "build": "node scripts/build.mjs"
   },
   "engines": {
     "node": ">=18"

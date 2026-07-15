@@ -3,7 +3,7 @@ import { createServer } from "node:http";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = fileURLToPath(new URL(".", import.meta.url));
+const root = fileURLToPath(new URL("..", import.meta.url));
 const port = Number(process.argv[2] || 5191);
 const types = {
   ".html": "text/html; charset=utf-8",
