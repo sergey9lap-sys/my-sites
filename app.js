@@ -82,7 +82,7 @@ projects.forEach((project, index) => {
   const media = fragment.querySelector(".project-media");
   const link = fragment.querySelector(".project-link");
   const image = fragment.querySelector("img");
-  const url = `/${project.slug}/`;
+  const url = `/${project.slug}`;
 
   card.dataset.category = project.category;
   media.href = url;
