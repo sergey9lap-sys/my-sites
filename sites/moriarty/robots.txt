@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://moriarty-bureau.example
+Sitemap: https://moriarty-bureau.example/sitemap.xml

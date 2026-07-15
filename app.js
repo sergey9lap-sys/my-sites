@@ -4,7 +4,7 @@ const projects = [
     type: "Космическая навигация",
     description: "Построение маршрутов и подготовка дальних межзвёздных экспедиций.",
     image: "./assets/lazarus.png",
-    port: 5182,
+    slug: "lazarus",
     category: "research"
   },
   {
@@ -12,7 +12,7 @@ const projects = [
     type: "Закрытая организация",
     description: "Оперативные досье, протоколы допуска и история лучших агентов.",
     image: "./assets/kings.png",
-    port: 5183,
+    slug: "kings",
     category: "corporate"
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     type: "Аналитическое бюро",
     description: "Интеллектуальные расследования и системный анализ сложных дел.",
     image: "./assets/moriarty.png",
-    port: 5184,
+    slug: "moriarty",
     category: "corporate"
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     type: "Исследовательская экспедиция",
     description: "Научный проект о путешествиях, открытиях и неизведанных территориях.",
     image: "./assets/vern.png",
-    port: 5185,
+    slug: "vern",
     category: "research"
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     type: "Нейротехнологии",
     description: "Программа ANIMUS и доступ к генетической памяти человечества.",
     image: "./assets/abstergo.png",
-    port: 5186,
+    slug: "abstergo",
     category: "corporate research"
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     type: "Институт парадоксов",
     description: "Закрытый протокол исследования альтернативных моделей реальности.",
     image: "./assets/paradox.jpg",
-    port: 5187,
+    slug: "paradox",
     category: "research"
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     type: "Биотехнологическая корпорация",
     description: "Исследовательская программа в области вирусологии и биозащиты.",
     image: "./assets/umbrella.png",
-    port: 5188,
+    slug: "umbrella",
     category: "corporate research"
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     type: "Энергетическая компания",
     description: "Главная энергетическая инфраструктура города Монстрополиса.",
     image: "./assets/monsters.png",
-    port: 5189,
+    slug: "monsters",
     category: "corporate"
   },
   {
@@ -68,14 +68,13 @@ const projects = [
     type: "Глобальная корпорация",
     description: "Биоинженерия, искусственный интеллект и технологии будущего.",
     image: "./assets/oscorp.png",
-    port: 5190,
+    slug: "oscorp",
     category: "corporate research"
   }
 ];
 
 const grid = document.querySelector("#project-grid");
 const template = document.querySelector("#project-template");
-const host = window.location.hostname || "127.0.0.1";
 
 projects.forEach((project, index) => {
   const fragment = template.content.cloneNode(true);
@@ -83,7 +82,7 @@ projects.forEach((project, index) => {
   const media = fragment.querySelector(".project-media");
   const link = fragment.querySelector(".project-link");
   const image = fragment.querySelector("img");
-  const url = `http://${host}:${project.port}/`;
+  const url = `/${project.slug}/`;
 
   card.dataset.category = project.category;
   media.href = url;

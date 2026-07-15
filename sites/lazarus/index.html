@@ -1,0 +1,151 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ПРОЕКТ «ЛАЗАРЬ»</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: Manrope, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          background: #fff;
+        }
+
+        .boot-shell {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          box-sizing: border-box;
+        }
+
+        .boot-card {
+          width: 100%;
+          max-width: 420px;
+          border: 1px solid rgba(15, 23, 42, 0.08);
+          border-radius: 24px;
+          background: #fff;
+          box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+          padding: 24px;
+          text-align: center;
+        }
+
+        .boot-label {
+          font-size: 11px;
+          font-weight: 800;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          color: #7c3aed;
+        }
+
+        .boot-title {
+          margin: 14px 0 0;
+          font-size: 28px;
+          line-height: 1.1;
+          font-weight: 800;
+          color: #0f172a;
+        }
+
+        .boot-text {
+          margin: 14px 0 0;
+          font-size: 15px;
+          line-height: 1.6;
+          color: #475569;
+        }
+
+        .boot-loader {
+          width: 44px;
+          height: 44px;
+          margin: 0 auto 18px;
+          border-radius: 999px;
+          border: 3px solid rgba(124, 58, 237, 0.18);
+          border-top-color: #7c3aed;
+          animation: boot-spin 0.9s linear infinite;
+        }
+
+        .boot-actions {
+          display: none;
+          margin-top: 18px;
+        }
+
+        .boot-button {
+          appearance: none;
+          border: none;
+          border-radius: 16px;
+          background: #7c3aed;
+          color: #fff;
+          font-size: 14px;
+          font-weight: 700;
+          padding: 14px 18px;
+          cursor: pointer;
+        }
+
+        .boot-card.is-stalled .boot-loader {
+          display: none;
+        }
+
+        .boot-card.is-stalled .boot-actions {
+          display: block;
+        }
+
+        @keyframes boot-spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+      <!-- Meta Pixel Code -->
+      <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1397800378797693');
+        fbq('track', 'PageView');
+      </script>
+      <!-- End Meta Pixel Code -->
+      <script type="module" crossorigin src="/lazarus/assets/index-D9Jb7U8M.js"></script>
+      <link rel="stylesheet" crossorigin href="/lazarus/assets/index-DEn2z0xk.css">
+    </head>
+
+    <body>
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style="display:none"
+          src="https://www.facebook.com/tr?id=1397800378797693&ev=PageView&noscript=1"
+        />
+      </noscript>
+      <div id="root">
+        <div class="boot-shell">
+          <div class="boot-card" id="boot-card">
+            <div class="boot-loader"></div>
+            <div class="boot-label">Загрузка страницы</div>
+            <h1 class="boot-title">Открываем навигационный штаб</h1>
+            <p class="boot-text" id="boot-text">Подготавливаем маршрутные данные.</p>
+            <div class="boot-actions">
+              <button class="boot-button" type="button" onclick="window.location.reload()">Обновить страницу</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        window.__APP_BOOTED__ = false;
+        window.setTimeout(function () {
+          if (window.__APP_BOOTED__) return;
+          var card = document.getElementById('boot-card');
+          var text = document.getElementById('boot-text');
+          if (!card || !text) return;
+          card.classList.add('is-stalled');
+          text.textContent = 'Если страница долго не открывается, попробуйте обновить ее. Если не поможет, откройте ссылку позже или напишите нам в поддержку.';
+        }, 7000);
+      </script>
+    </body>
+  </html>

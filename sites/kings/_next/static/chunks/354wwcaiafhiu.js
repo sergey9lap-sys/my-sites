@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,36247,e=>{"use strict";var s=e.i(43476);e.s(["default",0,function({className:e=""}){return(0,s.jsx)("a",{className:`gc-widget-slot ${e}`,href:"#access-request",children:(0,s.jsx)("span",{className:"gc-widget-label",children:"Запросить допуск"})})}])}]);

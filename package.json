@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "node scripts/server.mjs 5191",
     "start": "node scripts/server.mjs 5191",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/prepare-sites.mjs && node scripts/audit-sites.mjs && node scripts/build.mjs",
+    "prepare-sites": "node scripts/prepare-sites.mjs",
+    "audit": "node scripts/audit-sites.mjs"
   },
   "engines": {
     "node": ">=18"

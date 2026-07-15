@@ -1,0 +1,5 @@
+:HL["/kings/_next/static/chunks/0w_986cpvnaw6.css","style"]
+:HL["/kings/archive-hero.png","image"]
+:HL["/kings/candidate-avatars.png","image"]
+:HL["/kings/chief-archivist.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"ILNn6GdMFonpN6FJguJaA"}
